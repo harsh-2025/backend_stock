@@ -72,17 +72,17 @@ const fetchUserStocks = async (username) => {
 
 
 // FEOSIB1AQCYGF21H
-// app.get('/', (req, res) => {
-//   app.use(express.static(path.resolve(__dirname, "portfoliomanage_frontend", "build")));
-//   // res.send('Hello World!');
-//   res.sendFile(path.resolve(__dirname, "portfoliomanage_frontend", "build", "index.html"));
-// });
-app.use(express.static(path.resolve(__dirname, "portfoliomanage_frontend", "build")));
-
-// Define your route handlers
-app.get("/", (req, res) => {
+app.get('/', (req, res) => {
+  app.use(express.static(path.resolve(__dirname, "portfoliomanage_frontend", "build")));
+  // res.send('Hello World!');
   res.sendFile(path.resolve(__dirname, "portfoliomanage_frontend", "build", "index.html"));
 });
+// app.use(express.static(path.resolve(__dirname, "portfoliomanage_frontend", "build")));
+
+// // Define your route handlers
+// app.get("/", (req, res) => {
+//   res.sendFile(path.resolve(__dirname, "portfoliomanage_frontend", "build", "index.html"));
+// });
 
 app.post('/addMoreStock', async (req, res) => {
   const { username, stockSymbol, quantity, boughtPrice } = req.body;
