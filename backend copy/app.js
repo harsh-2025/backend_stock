@@ -73,9 +73,9 @@ const fetchUserStocks = async (username) => {
 
 // FEOSIB1AQCYGF21H
 app.get('/', (req, res) => {
-  app.use(express.static(path.resolve(__dirname, "portfoliomanage_frontend", "build")));
-  // res.send('Hello World!');
-  res.sendFile(path.resolve(__dirname, "portfoliomanage_frontend", "build", "index.html"));
+  // app.use(express.static(path.resolve(__dirname, "portfoliomanage_frontend", "build")));
+  res.send('Hello World!');
+  // res.sendFile(path.resolve(__dirname, "portfoliomanage_frontend", "build", "index.html"));
 });
 // app.use(express.static(path.resolve(__dirname, "portfoliomanage_frontend", "build")));
 
